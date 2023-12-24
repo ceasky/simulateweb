@@ -3,10 +3,10 @@
     class="d-flex justify-content-end flex-wrap align-content-center"
     style="width: 95%; margin: 0 auto; height: 10vh; color: white"
   >
-    <div class="d-flex justify-content-end mr-5">
+    <!-- <div class="d-flex justify-content-end mr-5">
       <div>聯絡我們：</div>
       <div>0999999999</div>
-    </div>
+    </div> -->
     <div class="d-flex justify-content-end">
       <div>賣場連結：</div>
       <div
@@ -27,18 +27,18 @@ export default {
     return {
       contact: "0999999999",
       url: [
-        {
-          name: "IG",
-          url: "https://www.youtube.com/watch?v=qORaYudQ7Zc&list=PLl_KIqd3w-Anc1-nYIiDbnsw2hdkpSeLh&index=1",
-        },
+        // {
+        //   name: "IG",
+        //   url: "https://www.youtube.com/watch?v=qORaYudQ7Zc&list=PLl_KIqd3w-Anc1-nYIiDbnsw2hdkpSeLh&index=1",
+        // },
         {
           name: "蝦皮",
-          url: "https://www.youtube.com/watch?v=pXhjs-35jSI&list=PLl_KIqd3w-Anc1-nYIiDbnsw2hdkpSeLh&index=2",
+          url: "https://shopee.tw/risa_wu?page=0&shopCollection=247086461",
         },
-        {
-          name: "PCHome",
-          url: "https://www.youtube.com/watch?v=NnTEZCxhxF4&list=PLl_KIqd3w-Anc1-nYIiDbnsw2hdkpSeLh&index=3",
-        },
+        // {
+        //   name: "PCHome",
+        //   url: "https://www.youtube.com/watch?v=NnTEZCxhxF4&list=PLl_KIqd3w-Anc1-nYIiDbnsw2hdkpSeLh&index=3",
+        // },
       ],
     };
   },

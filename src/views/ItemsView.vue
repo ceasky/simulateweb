@@ -160,7 +160,7 @@ export default {
       this.AllItems = GetApiData.Items;
       this.Category = [
         {
-          value: "",
+          value: "all",
           text: "站內查詢",
         },
       ];
@@ -174,12 +174,12 @@ export default {
       this.RenderItems();
     },
     RenderItems() {
-      if (this.Categoryid !== "") {
+      if (this.Categoryid !== "" && this.Categoryid !== "all") {
         console.log("yyyy", this.Categoryid);
         this.Renderlist = this.AllItems.filter(
           (item) => item.CategoryId == this.Categoryid
         );
-      } else {
+      } else if (this.Categoryid == "all") {
         console.log("nnn11", this.Categoryid);
         this.Renderlist = [...this.AllItems];
       }
