@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div style="height: 30vw; width: 95%; margin: 1rem auto">
+    <div style="height: 30vw; width: 95%; margin: 0 auto 2rem auto">
       <img
         class="mainimage"
         src="@/assets/company/mainimage.webp"
@@ -13,10 +13,10 @@
       class="d-flex flex-wrap mb-3"
       style="background-color: #141414; width: 95%; margin: 0 auto"
     >
-      <div class="col-12" style="font-size: 1.5rem; color: white">
+      <div class="col-12" style="font-size: 1.5rem; color: #fffdd0">
         {{ category.CategoryName }}
       </div>
-      <div class="col-12 d-flex home-positionR mt-2" style="height: 8rem">
+      <div class="col-12 d-flex home-positionR mt-2" style="">
         <button
           class="home-positionA1 home-arrowbutton"
           v-show="category.ShowPage"
@@ -26,12 +26,15 @@
           <i class="fa-solid fa-chevron-left"></i>
         </button>
         <div
-          class="home-ItemCss d-flex justify-content-center align-items-end"
+          class="home-ItemCss"
           v-for="(item, index) in category.RnderItems"
           :key="index"
-          @click="RanderItemDetail(category.CategoryId, item.ItemId)"
+          @click="RanderItemDetail(item.CategoryId, item.ItemId)"
           style="text-align: center"
         >
+          <div>
+            <img class="mainimage" :src="item.MainImage" alt="圖片描述" />
+          </div>
           <div>
             {{ item.ContentTitle }}
           </div>
@@ -59,7 +62,7 @@
       header-class="my-class"
     >
       <div class="" style="">
-        <div style="background-color: red">
+        <div style="height: 30rem; background-color: red">
           <img class="imgcss" :src="DetailData.MainImage" alt="圖片描述" />
         </div>
         <div class="d-flex align-items-center" style="height: 5rem">
@@ -86,10 +89,10 @@
         </div>
         <div class="d-flex flex-wrap">
           <div
-            v-for="(item,index) in DetailData.Otherimage"
+            v-for="(item, index) in DetailData.Otherimage"
             :key="index"
             class="col-4"
-            style="padding:0"
+            style="padding: 0"
           >
             <img class="imgcss" :src="item" alt="圖片描述" />
           </div>
@@ -101,119 +104,6 @@
 
 <script>
 import commonData from "@/common/companydata.js";
-
-const GetApiData = {
-  Category: [
-    { CategoryName: "產品類型1", CategoryId: "0" },
-    { CategoryName: "產品類型2", CategoryId: "1" },
-    { CategoryName: "產品類型3", CategoryId: "2" },
-    { CategoryName: "產品類型4", CategoryId: "3" },
-  ],
-  Items: [
-    {
-      ItemId: "0",
-      CategoryId: "0",
-      ContentTitle: "產品名稱1",
-      ContentImage: "",
-    },
-    {
-      ItemId: "1",
-      CategoryId: "0",
-      ContentTitle: "產品名稱2",
-      ContentImage: "",
-    },
-    {
-      ItemId: "2",
-      CategoryId: "0",
-      ContentTitle: "產品名稱3",
-      ContentImage: "",
-    },
-    {
-      ItemId: "3",
-      CategoryId: "0",
-      ContentTitle: "產品名稱4",
-      ContentImage: "",
-    },
-    {
-      ItemId: "4",
-      CategoryId: "0",
-      ContentTitle: "產品名稱5",
-      ContentImage: "",
-    },
-    {
-      ItemId: "5",
-      CategoryId: "0",
-      ContentTitle: "產品名稱6",
-      ContentImage: "",
-    },
-    {
-      ItemId: "6",
-      CategoryId: "1",
-      ContentTitle: "產品名稱7",
-      ContentImage: "",
-    },
-    {
-      ItemId: "7",
-      CategoryId: "1",
-      ContentTitle: "產品名稱8",
-      ContentImage: "",
-    },
-    {
-      ItemId: "8",
-      CategoryId: "2",
-      ContentTitle: "產品名稱9",
-      ContentImage: "",
-    },
-    {
-      ItemId: "9",
-      CategoryId: "3",
-      ContentTitle: "產品名稱10",
-      ContentImage: "",
-    },
-    {
-      ItemId: "10",
-      CategoryId: "3",
-      ContentTitle: "產品名稱11",
-      ContentImage: "",
-    },
-    {
-      ItemId: "11",
-      CategoryId: "3",
-      ContentTitle: "產品名稱12",
-      ContentImage: "",
-    },
-    {
-      ItemId: "12",
-      CategoryId: "0",
-      ContentTitle: "產品名稱13",
-      ContentImage: "",
-    },
-    {
-      ItemId: "13",
-      CategoryId: "0",
-      ContentTitle: "產品名稱14",
-      ContentImage: "",
-    },
-    {
-      ItemId: "14",
-      CategoryId: "0",
-      ContentTitle: "產品名稱15",
-      ContentImage: "",
-    },
-    {
-      ItemId: "15",
-      CategoryId: "0",
-      ContentTitle: "產品名稱16",
-      ContentImage: "",
-    },
-    {
-      ItemId: "16",
-      CategoryId: "0",
-      ContentTitle: "產品名稱17",
-      ContentImage: "",
-    },
-  ],
-};
 
 export default {
   components: {
@@ -252,7 +142,7 @@ export default {
   },
   methods: {
     GetCategoryContentApi() {
-      this.ApiData = GetApiData;
+      this.ApiData = commonData;
       this.SetData();
     },
     SetData() {
@@ -326,6 +216,8 @@ export default {
     },
     RanderItemDetail(CategoryId, ItemId) {
       console.log("RanderItemDetail", CategoryId, ItemId);
+      let object = this.ApiData.Items.find((item) => item.ItemId == ItemId);
+      this.DetailData = {...object}
       this.$refs["home-modal"].show();
     },
     rendercontacturl(url) {
@@ -340,8 +232,8 @@ export default {
 </script>
 <style>
 .home-ItemCss {
-  background-color: red;
-  min-width: 20%;
+  /* background-color: white; */
+  width: 20%;
 }
 .home-positionR {
   position: relative;
@@ -384,6 +276,9 @@ export default {
 .imgcss {
   height: 100%;
   width: 100%;
+}
+.cursor:hover{
+  color:#fffdd0
 }
 </style>
 

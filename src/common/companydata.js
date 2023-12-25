@@ -4,31 +4,31 @@ export default {
     Category: [
         {
             CategoryId: "0",
-            CategoryName: "文具類",
+            CategoryName: "迪士尼文具類",
         },
         {
             CategoryId: "1",
-            CategoryName: "衛浴用品",
+            CategoryName: "迪士尼衛浴用品",
         },
         {
             CategoryId: "2",
-            CategoryName: "杯盤餐具們",
+            CategoryName: "迪士尼杯盤餐具們",
         },
         {
             CategoryId: "3",
-            CategoryName: "包包類",
+            CategoryName: "迪士尼包包類",
         },
         {
             CategoryId: "4",
-            CategoryName: "小朋友系列",
+            CategoryName: "迪士尼小朋友系列",
         },
         {
             CategoryId: "5",
-            CategoryName: "日用雜貨",
+            CategoryName: "迪士尼日用雜貨",
         },
         {
             CategoryId: "6",
-            CategoryName: "玩偶吊飾",
+            CategoryName: "迪士尼玩偶吊飾",
         },
         {
             CategoryId: "7",
@@ -60,106 +60,21 @@ export default {
             ],
         },
         {
-            ItemId: "0",
-            CategoryId: "0",
-            ContentTitle: "產品名稱1",
-            ContentImage: "",
-        },
-        {
             ItemId: "1",
             CategoryId: "0",
-            ContentTitle: "產品名稱2",
-            ContentImage: "",
+            ContentTitle: "搖晃屁屁原子筆💕維尼、史迪奇、杯麵、唐老鴨、熊抱哥",
+            MainImage: "https://down-tw.img.susercontent.com/file/tw-11134207-7r98o-lmh6a0jdh3152c",
+            Otherimage: ['https://down-tw.img.susercontent.com/file/tw-11134207-7r990-lmh6a0jd315n40'],
+            Contacturl: "https://shopee.tw/%E6%90%96%E6%99%83%E5%B1%81%E5%B1%81%E5%8E%9F%E5%AD%90%E7%AD%86%F0%9F%92%95%E7%B6%AD%E5%B0%BC%E3%80%81%E5%8F%B2%E8%BF%AA%E5%A5%87%E3%80%81%E6%9D%AF%E9%BA%B5%E3%80%81%E5%94%90%E8%80%81%E9%B4%A8%E3%80%81%E7%86%8A%E6%8A%B1%E5%93%A5%E3%80%82%E6%97%A5%E6%9C%AC%E8%BF%AA%E5%A3%AB%E5%B0%BC%E4%BB%A3%E8%B3%BC-i.16822809.20192343600?sp_atk=26f45a9a-5371-4c52-b242-6a0fa80cfc82&xptdk=26f45a9a-5371-4c52-b242-6a0fa80cfc82",
+            Price: "360",
+            Info: [
+                '搖晃屁屁原子筆💕維尼、史迪奇、杯麵、唐老鴨、熊抱哥',
+                '連線時就搶購一空的超熱門✨搖屁屁原子筆！！',
+                '這麼療癒的小可愛',
+                '一定要擁有吧🫶🏻🫶🏻',
+                '在教室、辦公室用它就是最吸睛(◍˃̶ᗜ˂̶◍)♡'
+            ],
         },
-        {
-            ItemId: "2",
-            CategoryId: "0",
-            ContentTitle: "產品名稱3",
-            ContentImage: "",
-        },
-        {
-            ItemId: "3",
-            CategoryId: "0",
-            ContentTitle: "產品名稱4",
-            ContentImage: "",
-        },
-        {
-            ItemId: "4",
-            CategoryId: "0",
-            ContentTitle: "產品名稱5",
-            ContentImage: "",
-        },
-        {
-            ItemId: "5",
-            CategoryId: "0",
-            ContentTitle: "產品名稱6",
-            ContentImage: "",
-        },
-        {
-            ItemId: "6",
-            CategoryId: "1",
-            ContentTitle: "產品名稱7",
-            ContentImage: "",
-        },
-        {
-            ItemId: "7",
-            CategoryId: "1",
-            ContentTitle: "產品名稱8",
-            ContentImage: "",
-        },
-        {
-            ItemId: "8",
-            CategoryId: "2",
-            ContentTitle: "產品名稱9",
-            ContentImage: "",
-        },
-        {
-            ItemId: "9",
-            CategoryId: "3",
-            ContentTitle: "產品名稱10",
-            ContentImage: "",
-        },
-        {
-            ItemId: "10",
-            CategoryId: "3",
-            ContentTitle: "產品名稱11",
-            ContentImage: "",
-        },
-        {
-            ItemId: "11",
-            CategoryId: "3",
-            ContentTitle: "產品名稱12",
-            ContentImage: "",
-        },
-        {
-            ItemId: "12",
-            CategoryId: "0",
-            ContentTitle: "產品名稱13",
-            ContentImage: "",
-        },
-        {
-            ItemId: "13",
-            CategoryId: "0",
-            ContentTitle: "產品名稱14",
-            ContentImage: "",
-        },
-        {
-            ItemId: "14",
-            CategoryId: "0",
-            ContentTitle: "產品名稱15",
-            ContentImage: "",
-        },
-        {
-            ItemId: "15",
-            CategoryId: "0",
-            ContentTitle: "產品名稱16",
-            ContentImage: "",
-        },
-        {
-            ItemId: "16",
-            CategoryId: "0",
-            ContentTitle: "產品名稱17",
-            ContentImage: "",
-        },
+   
     ],
 };
