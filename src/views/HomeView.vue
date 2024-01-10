@@ -13,7 +13,7 @@
       class="d-flex flex-wrap mb-3"
       style="background-color: #141414; width: 95%; margin: 0 auto"
     >
-      <div class="col-12" style="font-size: 1.5rem; color: #fffdd0">
+      <div class="col-12" style="font-size: 2.5rem; color: #fffdd0">
         {{ category.CategoryName }}
       </div>
       <div class="col-12 d-flex home-positionR mt-2" style="">

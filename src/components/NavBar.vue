@@ -90,7 +90,8 @@ export default {
       this.CompanyImage = commonData.CompanyImage;
       this.Category = commonData.Category;
       this.rendercategory = this.Category.slice(0, 5);
-      this.othercategory = this.Category.slice(4, this.Category.length);
+      this.othercategory = this.Category.slice(5, this.Category.length);
+      console.log(".ddd..",this.Category)
     },
     randerhomepage() {
       this.$router.push("/");

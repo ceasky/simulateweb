@@ -18,7 +18,6 @@
         {{ item.name }}
       </div>
     </div>
-
   </div>
 </template>
 <script>
